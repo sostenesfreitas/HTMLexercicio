@@ -1,0 +1,25 @@
+
+button{
+    background:#1f3c58;
+    border-radius:5px;
+    color:white;
+    border: none;
+    display: inline-block;
+    cursor:pointer;
+    
+}
+div.bloco{
+    width: 450px;
+    margin:0 auto;
+    overflow :0 auto;
+    background:#5F9EA0;
+    padding:50px 0;    
+}
+label{
+    text-align:center;
+    color:white;
+}
+div.divv{
+ text-align:center;
+    padding 10px 10px;
+}

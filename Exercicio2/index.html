@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste </title>
+     <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body>
+
+<script LANGUAGEM="JavaScript" TYPE="text/javascript">
+
+function myFunction(){
+var myInput= document.createElement("input");
+myInput.setAttribute("type","text");
+myInput.setAttribute("class","caixa");
+myInput.setAttribute("name","Input");
+myDiv= document.getElementById("myDiv");
+myDiv.appendChild(myInput);
+}
+function multiplicar(){
+var miojo = document.getElementsByName("Input");
+
+if(miojo.length == 2){
+document.getElementById("resposta").value = miojo[0].value * miojo[1].value;
+}
+else if(miojo.length == 3){
+document.getElementById("resposta").value = miojo[0].value * miojo[1].value * miojo[2].value;
+}
+else if(miojo.length == 4){
+document.getElementById("resposta").value = miojo[0].value * miojo[1].value * miojo[2].value * miojo[3].value;
+}
+else if(miojo.length == 5){
+document.getElementById("resposta").value = miojo[0].value * miojo[1].value * miojo[2].value * miojo[3].value * miojo[4].value;
+}
+else if(miojo.length == 6){
+document.getElementById("resposta").value = miojo[0].value * miojo[1].value * miojo[2].value * miojo[3].value * miojo[4].value * miojo[5].value;
+}
+else if(miojo.length == 7){
+document.getElementById("resposta").value = miojo[0].value * miojo[1].value * miojo[2].value * miojo[3].value * miojo[4].value * miojo[5].value * miojo[6].value;
+}
+else if(miojo.length == 8){
+document.getElementById("resposta").value = miojo[0].value * miojo[1].value * miojo[2].value * miojo[3].value * miojo[4].value * miojo[5].value * miojo[6].value * miojo[7].value;
+}
+else if(miojo.length == 9){
+document.getElementById("resposta").value = miojo[0].value * miojo[1].value * miojo[2].value * miojo[3].value * miojo[4].value * miojo[5].value * miojo[6].value * miojo[7].value * miojo[8].value;
+}
+}
+</script>
+<div class="bloco">
+<div id="myDiv" class="divv" >
+    <label for="nome">Gerardor de Caixa de Texto</label>
+    <button type="submit"  value="gerar" onclick="myFunction()">Criar</button>
+    <br>
+    <label for="multiplicar">Multiplicar</label>
+    <button type="submit" value="multiplicar" onclick="multiplicar()">Multiplicar </button>
+    
+    <input type="text"  id="resposta" placeholder="resposta" />
+</div>
+</div>
+</body>
+</html>

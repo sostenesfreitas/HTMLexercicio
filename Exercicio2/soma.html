@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculadora</title>
+</head>
+<body>
+<div clas="bloco">
+<h1><strong>Calculadora<strong></h1>
+<form name= "Calculadora">
+<table border= auto>
+<tr>
+<td> <input type="text" name="Input" size="20"> <br></td>
+</tr>
+<tr>
+<td> 
+ 
+<input type="button" name="um" value="1" onClick="Calculadora.Input.value += '1'"/>
+
+<input type="button" name="dois" value="2" onClick="Calculadora.Input.value += '2'"/>
+<input type="button" name="tres" value="3" onClick="Calculadora.Input.value += '3'"/>
+<input type="button" name="soma" value="+" onClick="Calculadora.Input.value += '+'"/>
+<br>
+<input type="button" name="quatro" value="4" onClick="Calculadora.Input.value += '4'"/>
+<input type="button" name="cinco" value="5" onClick="Calculadora.Input.value += '5'"/>
+<input type="button" name="seis" value="6" onClick="Calculadora.Input.value += '6'"/>
+<input type="button" name="subtrair" value="-" onClick="Calculadora.Input.value += '-'"/>
+<br>
+<input type="button" name="sete" value="7" onClick="Calculadora.Input.value += '7'"/>
+<input type="button" name="oito" value="8" onClick="Calculadora.Input.value += '8'"/>
+<input type="button" name="nove" value="9" onClick="Calculadora.Input.value += '9'"/>
+<input type="button" name="multiplicar" value="*" onClick="Calculadora.Input.value += '*'"/>
+<br>
+<input type="button" name="limpar" value="C" onClick="Calculadora.Input.value =' '"/>
+<input type="button" name="zero" value="0" onClick="Calculadora.Input.value += '0'"/>
+<input type="button" name="resultado" value="=" onClick="Calculadora.Input.value = eval(Calculadora.Input.value)"/>
+ <input type="button" name="dividir" value="/" onClick="Calculadora.Input.value += '/'"/>
+<br>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
+
