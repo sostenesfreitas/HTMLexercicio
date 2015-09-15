@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste </title>
+     <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body>
+
+<script LANGUAGEM="JavaScript" TYPE="text/javascript">
+function random(){
+
+var x = Math.floor((Math.random() * 99) + 1);
+var y = Math.floor((Math.random() * 99) + 1);
+var z = Math.floor((Math.random() * 99) + 1);
+
+for (var i =1 ; i < 3;i++){
+document.getElementById("1").innerHTML = x;
+}
+for (var i =1 ; i < 3;i++){
+document.getElementById("2").innerHTML = y;
+}
+for (var i =1 ; i < 3;i++){
+document.getElementById("3").innerHTML = z;
+}
+}
+</script>
+<div class="bloco">
+<div id="myDiv" class="divv" >
+    <label for="nome">Gerardor de Numeros</label>
+    <button type="submit"  value="gerar" onclick="random()">Criar</button>
+    <br>
+    
+<div id="my">
+<ul>
+<li id ="1" ></li>
+<li id ="2" ></li>
+<li id ="3" ></li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

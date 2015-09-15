@@ -23,3 +23,10 @@ div.divv{
  text-align:center;
     padding 10px 10px;
 }
+li{
+list-style-type:none;
+color:white;
+display: inline-block;
+padding:5px;
+
+}
