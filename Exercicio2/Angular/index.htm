@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cadastroApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="cadastro.js"></script>
+</head>
+<body ng-controller="CadastroListController as cadastroList">
+<div class="jumbotron">
+    <table class="table">
+        <tr>
+            <th>Nome</th>
+            <th>Cpf</th>
+            <th>Idade</th>
+        </tr>
+        <tr ng-repeat="pessoa in cadastroList.pessoas">
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.cpf}}</td>
+            <td>{{pessoa.idade}}</td>
+        </tr>
+        
+    </table>
+    <form ng-submit="cadastroList.addPessoa()">
+      <p class="pa" ng-repeat="pessoa in cadastroList.pessoas">{{pessoa.nome}}</p>  
+<input type="text" ng-model="cadastroList.pessoaNome" placeholder="Seu nome">
+ 
+        <input type="text" ng-model="cadastroList.pessoaCpf" placeholder="Seu Cpf">
+        <input type="text" ng-model="cadastroList.pessoaIdade" placeholder="Sua idade">
+
+<br>
+        <input type="submit" class="miojo"  value="Cadastrar Pessoa">
+        
+    </form>
+   <h4>Media de Idade: {{cadastroList.mediaIdade()}}</h4>
+   <h4>Quantidade de Pessoas Cadastradas: {{cadastroList.listagem()}}</h4> 
+   
+</div>
+</body>
+</html>
