@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt"ng-app="listaTelefonica" >
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Telefonica </title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> 
+    <script>
+        angular.module("listaTelefonica", []);
+        angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function(){
+          var lista = this;
+                lista.app ="Lista Telefonica";
+                lista.contatos=[{nome :"Sóstenes" , telefone : "9990-0000"},
+                                {nome :"Freitas" ,  telefone : "9090-0909"},
+                                {nome :"Andrade" ,  telefone : "8989-0201"}];
+                lista.cadastraContatos = function(contao){
+                lista.contatos.push(angular.copy(contao));
+            delete lista.contato;
+                  };
+                                });
+    </script>
+    </head>
+<body ng-controller="listaTelefonicaCtrl as lista">
+<div class="jumbotron">
+    <h3>{{lista.app}}</h3>
+
+    <table class ="table table-striped">
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+        <tr ng-repeat="contato in lista.contatos">
+            <td>{{contato.nome}}</td>
+            <td>{{contato.telefone}}</td>
+        </tr>
+   </table>
+   <hr/>
+   <input type= "text" class="form-search" ng-model="lista.contato.nome" placeholder="Nome"/>
+  <input type= "text" class="form-search" ng-model="lista.contato.telefone"placeholder="Número"/>
+  <input type="submit" class="btn btn-primary btn-block" ng-click="lista.cadastraContatos(lista.contato)"/>
+</div>
+</body>
+</html>

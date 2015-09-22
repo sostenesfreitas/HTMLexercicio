@@ -226,8 +226,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: white;
-  background-color: #ffffff;
+  color: black;
+  background-color:white;
 }
 
 a {
@@ -2089,7 +2089,7 @@ table {
 
 .table-striped tbody tr:nth-child(odd) td,
 .table-striped tbody tr:nth-child(odd) th {
-  background-color: #CDCDCD;
+  background-color:white;
 }
 
 .table-hover tbody tr:hover td,
@@ -6201,11 +6201,11 @@ margin:0 0 0 5px;
 }
 .jumbotron {
 width: 400px;
-text-align: left;
+text-align: center;
 margin-top:20px;
 margin-left:auto;
 margin-right:auto;
-background-color:#FF4500;
+background-color:lightgrey;
 }
 .pa{
 margin: 0 0 0 230px;
