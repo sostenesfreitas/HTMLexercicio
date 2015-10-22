@@ -1,0 +1,4 @@
+[
+	{"description":"Lata de Milho", "price":1.2, "qnt":12, "toDelete":false},
+	{"description":"Extrato de Tomate", "price":2.4, "qnt":15, "toDelete":false}
+]

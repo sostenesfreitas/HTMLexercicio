@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="cartApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="cart.js"></script>
+        
+        
+  </head>
+  <body>
+  <!-- Produtos: Descrição, Preço Unitário, Quantidade -->
+  <div ng-controller="CartController">
+	  <form  ng-submit="addProduct()">
+		Descricao do Produto <input type="text" id="prodName" ng-model="prodName" /> <br />
+		Preco do Produto <input type="text" id="prodPrice" ng-model="prodPrice" /> <br />
+		Quantidade do Produto <input type="text" id="prodQtd" ng-model="prodQtd" /> <br />
+		<input type="submit" value="Insere" />
+	  </form>
+	  <form>
+		  <table>
+			<tr>
+				<th>Produto</th><th>$ Unitario</th><th>Qntd</th>
+			</tr>
+			<tr ng-repeat="product in products">
+				
+				<td>{{product.description}}</td><td>{{product.price}}</td><td>{{product.qnt}}</td>
+                                
+			</tr>
+		  </table>
+ 		
+		  
+		  
+	  </form>
+	  <h2>Total de Compras: {{getTotal()}}</h2>
+	<h2>Mais caro: {{maxValue()}}</h2>
+	<h2>Mais barato: {{minValue()}}</h2>
+  </div>
+  </body>
+</html>
